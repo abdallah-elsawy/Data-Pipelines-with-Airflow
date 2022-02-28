@@ -17,18 +17,18 @@ We'll be working with two datasets that reside in S3. Here are the S3 links for 
 * Log data: ' s3://udacity-dend/log_data '
 
 Example of ETL DAG:
-![](Images/example-dag.png)
+![](images/example-dag.png)
 
 # Add Airflow Connections to AWS
 Here, we'll use Airflow's UI to configure your AWS credentials and connection to Redshift.
 
 Click on the **Admin** tab and select **Connections**.
 
-![](Images/admin-connections.png)
+![](images/admin-connections.png)
 
 Under **Connections**, select **Create**.
 
-![](Images/create-connection.png)
+![](images/create-connection.png)
 
 On the create connection page, enter the following values:
 
@@ -42,7 +42,7 @@ On the create connection page, enter the following values:
 
 Once you've entered these values, select **Save and Add Another**.
 
-![](Images/connection-aws-credentials.png)
+![](images/connection-aws-credentials.png)
 
 On the next create connection page, enter the following values:
 
@@ -62,8 +62,8 @@ On the next create connection page, enter the following values:
 
 Once you've entered these values, select **Save**.
 
-![](Images/cluster-details.png)
+![](images/cluster-details.png)
 
-![](Images/connection-redshift.png)
+![](images/connection-redshift.png)
 
 
