@@ -114,13 +114,16 @@ load_time_dimension_table = LoadDimensionOperator(
     sql_query=SqlQueries.time_table_insert
 )
 
-
-
+    dq_checks=[
+        {'check_sql': "SELECT COUNT(*) FROM users WHERE userid is null", 'expected_result': 0},
+        {'check_sql': "SELECT COUNT(*) FROM songs WHERE songid is null", 'expected_result': 0}
+    ]
 
 run_quality_checks = DataQualityOperator(
     task_id='Run_data_quality_checks',
     dag=dag,
     redshift_conn_id="redshift",
+    dq_checks=dq_checks
     tables=[ "songplays", "songs", "artists",  "time", "users"]
 )
 
