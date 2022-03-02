@@ -15,6 +15,7 @@ class LoadDimensionOperator(BaseOperator):
                  redshift_conn_id="", 
                  tables="",
                  sql_query="",
+                 truncate_table="",
                  *args, **kwargs):
 
 
