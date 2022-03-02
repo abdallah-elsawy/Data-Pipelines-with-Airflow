@@ -16,7 +16,7 @@ class StageToRedshiftOperator(BaseOperator):
     def __init__(self, 
                  redshift_conn_id="",
                  aws_credentials_id="", 
-                 table="",
+                 tables="",
                  s3_bucket="",
                  s3_key="",
                  json_path_option="auto",
