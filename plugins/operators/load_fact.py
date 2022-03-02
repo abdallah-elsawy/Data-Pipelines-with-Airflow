@@ -24,7 +24,7 @@ class LoadFactOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
 
         if self.truncate_table:
-            self.log.info("Delete {} Table" .format(self.tables)')
+            self.log.info("Delete {} Table" .format(self.tables))
             redshift.run("Delete From {}".format(self.tables))
 
         self.log.info(f'Running sql_query {self.sql_query}')
