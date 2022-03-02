@@ -23,7 +23,7 @@ class LoadDimensionOperator(BaseOperator):
         self.tables = tables
         self.redshift_conn_id = redshift_conn_id
         self.sql_query = sql_query
-        self.truncate_table = truncate_table
+        self.truncate_table = True
 
 
     def execute(self, context):
