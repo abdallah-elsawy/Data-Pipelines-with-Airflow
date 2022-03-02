@@ -21,22 +21,6 @@ class DataQualityOperator(BaseOperator):
         self.tables = tables
         self.redshift_conn_id = redshift_conn_id
 
-
-    def execute(self, context):
-    	redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
-    	for table in self.tables:
-            
-	    results = redshift.get_records("SELECT COUNT(*) FROM {}".format(table))
-	    for result in results:
-                
-                count = redshift.get_records(result)[0][0]
-		if count != results[result]:
-                    
-		   raise ValueError(f"DataQualityOperator not implemented yet")
-            
-            self.log.info('DataQualityOperator passed')
-
-
     def execute(self, context):
     	redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
     	for table in self.tables:
