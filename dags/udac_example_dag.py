@@ -90,7 +90,7 @@ load_artist_dimension_table = LoadDimensionOperator(
     dag=dag,
     redshift_conn_id="redshift",
     table="public.artists",
-    sql_query=SqlQueries.artists_table_insert
+    sql_query=SqlQueries.artist_table_insert
 )
 
 
