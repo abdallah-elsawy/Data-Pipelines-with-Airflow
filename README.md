@@ -84,7 +84,7 @@ To complete the project, we need to build four different operators that will sta
 
 All of the operators and task instances will run SQL statements against the Redshift database. However, using parameters wisely will allow us to build flexible, reusable, and configurable operators we can later apply to many kinds of data pipelines with Redshift and with other databases.
 
-Stage Operator
+*Stage Operator*
 The stage operator is expected to be able to load any JSON formatted files from S3 to Amazon Redshift. The operator creates and runs a SQL COPY statement based on the parameters provided. The operator's parameters should specify where in S3 the file is loaded and what is the target table.
 
 The parameters should be used to distinguish between JSON file. Another important requirement of the stage operator is containing a templated field that allows it to load timestamped files from S3 based on the execution time and run backfills.
